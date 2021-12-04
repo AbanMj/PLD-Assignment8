@@ -1,7 +1,13 @@
+import random
 
 def lotteryf():
+    
     tryagain= "y"
-    while tryagain[0]=='y':
+    while tryagain[0]=='y': 
+        first= random.randint(0,9)
+        second=random.randint(0,9)
+        third=random.randint(0,9)
+        randoms= [first, second, third]
         
         def numbinput():
             numb1= int(input('\nEnter 1st number(0-9):    '))
@@ -9,18 +15,15 @@ def lotteryf():
             numb3= int(input('Enter 3rd number(0-9):    '))
             return numb1, numb2,numb3
         numbers= numbinput()
-          
-        import random
-        for forwin_numb in range(1):
-            first= random.randint(0,9)
-            second=random.randint(0,9)
-            third=random.randint(0,9)
-        print(f"\nThe winning numbers are  {first},  {second},  {third}.")
-            
-        if numbers==forwin_numb:
-            print("You Win! Congratulation")
+
+                
+        if randoms==numbers :
+            print("\nYou Win! Congratulation")
+            print(f"The winning numbers are  {randoms}.")
+            tryagain= input("Want to play again? (y or n):    ")      
         else:
-            print ('You loss')
-            tryagain= input("Try Again (y or n):    ")      
+            print ('\nYou loss')
+            print(f"The winning numbers are  {randoms}.")
+            tryagain= input("Try Again? (y or n):    ")      
 
 lottery= lotteryf()
