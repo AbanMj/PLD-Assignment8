@@ -13,5 +13,5 @@ while find != guess:
     elif find< guess:
         print(' Less than')
         guess= float(input('Guess again:   '))
-        
-print("     \nCongratulation! you Guess the number!")
+print(f"     \nWell done!! {find} is the number you should guess.")       
+print("Congratulation! you Guess the number!")
